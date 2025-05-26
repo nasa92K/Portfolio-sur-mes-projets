@@ -1,12 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio de [Votre Nom]</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #e0e7ff 0%, #f1f5f9 100%);
+            margin: 0;
+            padding: 0;
+            color: #232946;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            box-shadow: 0 6px 32px 0 rgba(60,72,88,0.13);
+            border-radius: 16px;
+            overflow: hidden;
+            padding: 32px 24px;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .avatar {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #a5b4fc;
+        }
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.4rem;
+        }
+        h2 {
+            margin-top: 38px;
+            font-size: 1.7rem;
+            color: #475569;
+        }
+        .about {
+            margin-top: 10px;
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+        }
+        .skill {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 7px 18px;
+            border-radius: 24px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 18px;
+        }
+        .project-card {
+            background: #f1f5f9;
+            border-radius: 12px;
+            box-shadow: 0 1px 8px 0 rgba(60,72,88,0.09);
+            padding: 18px 16px;
+            transition: transform 0.15s;
+        }
+        .project-card:hover {
+            transform: translateY(-6px) scale(1.03);
+        }
+        .project-title {
+            margin: 0 0 7px 0;
+            font-size: 1.15rem;
+            color: #3730a3;
+        }
+        .project-desc {
+            color: #475569;
+            font-size: 1rem;
+        }
+        .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #6366f1;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact {
+            margin-top: 30px;
+            background: #e0e7ff;
+            border-radius: 8px;
+            padding: 24px 18px;
+            text-align: center;
+        }
+        .contact a {
+            color: #3730a3;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 4px;
+            }
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Mon Portfolio</h1>
-    
+    <div class="container">
+        <header>
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Photo de profil" class="avatar">
+            <div>
+                <h1>[Votre Nom]</h1>
+                <div class="about">
+                    Développeur Web passionné basé à [Votre Ville]. J'aime créer des sites et applications modernes, élégants et performants.
+                </div>
+            </div>
+        </header>
+        
+        <h2>Compétences</h2>
+        <div class="skills">
+            <span class="skill">HTML5</span>
+            <span class="skill">CSS3</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">React</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">Python</span>
+            <span class="skill">Git</span>
+            <span class="skill">Figma</span>
+        </div>
+        
+        <h2>Projets</h2>
+        <div class="projects">
+            <div class="project-card">
+                <div class="project-title">Application de gestion de tâches</div>
+                <div class="project-desc">
+                    Une application web moderne pour organiser et suivre vos tâches quotidiennes, avec React & Node.js.
+                </div>
+                <a href="#" class="project-link" target="_blank">Voir le projet</a>
+            </div>
+            <div class="project-card">
+                <div class="project-title">Portfolio interactif</div>
+                <div class="project-desc">
+                    Mon propre site portfolio, responsive et dynamique, pour présenter mon parcours et mes réalisations.
+                </div>
+                <a href="#" class="project-link" target="_blank">Voir le projet</a>
+            </div>
+            <div class="project-card">
+                <div class="project-title">API météo</div>
+                <div class="project-desc">
+                    Une API RESTful réalisée avec Python Flask pour récupérer la météo actuelle de n'importe quelle ville.
+                </div>
+                <a href="#" class="project-link" target="_blank">Voir le projet</a>
+            </div>
+        </div>
+        
+        <div class="contact">
+            <h2>Contact</h2>
+            <p>Vous souhaitez collaborer ou discuter d'un projet ? N'hésitez pas à me contacter :</p>
+            <a href="mailto:votremail@email.com">votremail@email.com</a>
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/yourusername/" target="_blank">LinkedIn</a>
+        </div>
+    </div>
 </body>
 </html>
